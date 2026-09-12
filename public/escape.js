@@ -387,7 +387,7 @@ function handleProgress(event){
   var load = createText(Loadmap,"Now loading..."+Rate+"%",5,445,24,{font:'Times New Roman',color:"white"})
   var loadGrp = new createjs.Shape();
     loadGrp.graphics.beginFill("#d98200")
-    loadGrp.graphics.drawRect(0, 475,64*Rate, 5);
+    loadGrp.graphics.drawRect(0, 475,6.4*Rate, 5);
   load.x=5;
   load.y=445;
   Loadmap.addChild(load);
