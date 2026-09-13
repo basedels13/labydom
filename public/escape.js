@@ -393,7 +393,7 @@ function handleProgress(event){
   Loadmap.addChild(load);
   Loadmap.addChild(loadGrp);
   if(Rate==100){
-    load.text="Load completed"
+    load.text="Load completed v2.0"
   }
 }
 function handleFileLoadComplete(event) {
@@ -991,11 +991,8 @@ var timer2 = null;
         cLock=true;
         Itembartext.text="かねつ　しゅうりょう！"
         Ice = drawBitmap(Wallmap,queue.getResult(ice_src[3]),0,0,550,400);
-        mirror = drawBitmap(Wallmap,queue.getResult("orbmirror.png"),100,40,300,300);
-        if (timer2 != null) {
-        clearTimeout(timer2);
-        }}
-    timer2 = setTimeout(iceclear,1200);
+        mirror = drawBitmap(Wallmap,queue.getResult("orbmirror.png"),100,40,300,300);}
+    timer2 = setTimeout(iceclear,2800);
   }
 }else if(icestate ==4){//mirror取得
   if(mirrorstate ==0){
@@ -1327,9 +1324,7 @@ if(mouseX > 300 && mouseX < 433){if(mouseY > 115 && mouseY < 380){
     Wallmap.removeChild(btngrn);
     btngrn = drawBitmap(Wallmap,queue.getResult("btn1.png"),255,150,70,70);
         console.log('300milisec spaned!');
-        if (timer2 != null) {
-            clearTimeout(timer2);
-        }}
+    }
 timer2 = setTimeout(grnpush,300);
 }}
 }
@@ -2046,10 +2041,7 @@ IceP.sourceRect={x:375,y:140,width:90,height:130};
 function firelog() {
 Wallmap.removeChild(IceP);
 cLock=true;
-  if (timer2 != null) {
-      // タイムアウトタイマーをクリア
-      clearTimeout(timer2);
-}}
+};
 
 if(mouseX > 190 && mouseX < 327){
 if(mouseY > 80 && mouseY < 130){//答え合わせ
@@ -2067,9 +2059,7 @@ timer2 = setTimeout(firecheck,500);
       }else{
       Wallmap.removeChild(IceP);
       }
-      if (timer2 != null) {
-          clearTimeout(timer2);
-      }}
+    }
 }}
 function icecheck(){
       if (icebtn.length !== iceAns.length){
@@ -2187,8 +2177,6 @@ pocostate =1;
 
 function Pocodraw(){
   //pocoQ.removeAllChildren();
-if (timer2 != null) {
-  clearTimeout(timer2);}
 if(pocostate ==1){
   se5.play();
   Table = drawBitmap(Wallmap,queue.getResult("imgBdoor.png"),0,0,550,400);
@@ -2609,7 +2597,7 @@ var Text_pre=[
   {chr:"",word:"……"},
   {chr:"ラビィ",word:"「怖いよ……苦しいよ……」"},
   {chr:"",word:"森の外で出会った人たちは、みんなラビィとは違った。\n外の世界は、無垢なラビィに残酷な現実を突きつけた。"},
-  {chr:"",word:"「もうツラいのは嫌、助けて！」"},
+  {chr:"ラビィ",word:"「もうツラいのは嫌、助けて！」"},
   {chr:"ラビィ",word:"「助けてよニーシャ！」"},
   {chr:"",word:"ニーシャはラビィの友達。"},
   {chr:"",word:"ニーシャはずっとラビィを助けてくれた。"},
@@ -2628,9 +2616,9 @@ var Text_pre=[
   {chr:"ニーシャ",word:"「あの子に会いたいな……」"},
   {chr:"",word:"自分を守ってくれている友達の心の声。"},
   {chr:"",word:"幻聴だったのかもしれない。\nそれでもラビィはその声を確かに聞いた。"},
-  {chr:"",word:"そんなの……ムリだよ。"},
-  {chr:"",word:"外は……怖い。"},
-  {chr:"",word:"それでも……。"},
+  {chr:"ラビィ",word:"「そんなの……ムリだよ」"},
+  {chr:"ラビィ",word:"「外は……怖い」"},
+  {chr:"ラビィ",word:"（それでも……）"},
   {chr:"ラビィ",word:"「ニーシャ」"},
   {chr:"ラビィ",word:"「このままじゃ……、\nニーシャに甘えっぱなしじゃダメだよね」"},
   {chr:"",word:"涙を拭って、ラビィは立ち上がった。"},
@@ -2638,7 +2626,7 @@ var Text_pre=[
   {chr:"",word:"fade"},
   {chr:"",word:"……"},
   {chr:"",word:"嵐は収まり、再び感情がどこかへ抜けていった。"},
-  {chr:"",word:"「今、何が起こったんだろ？」"},
+  {chr:"ラビィ",word:"「今、何が起こったんだろ？」"},
   {chr:"ラビィ",word:"「どうしてこんなに袖が濡れてるの？」"},
   {chr:"",word:"理由はもうわからなくなっていたけど、\nとにかくラビィはこの部屋から出ようとしていた。"},
   {chr:"ラビィ",word:"「行こう」"},
