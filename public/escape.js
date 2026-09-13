@@ -694,10 +694,10 @@ function clickHandler(e) {
         hexs={};
           hexs.navy=hexmirror(145,150,'rgba(0,51,204,1)');
           hexs.blue=hexmirror(194,125,'rgba(75,100,255,1)');
-          hexs.red=hexmirror(94,66,'rgba(255,0,0,1)');
+          hexs.red=hexmirror(96,66,'rgba(255,0,0,1)');
           hexs.green=hexmirror(194,66,'rgba(0,138,83,1)');
           hexs.akane=hexmirror(145,40,'rgba(254,131,50,1)');
-          hexs.purple=hexmirror(94,125,'rgba(153,51,255,1)');
+          hexs.purple=hexmirror(96,125,'rgba(153,51,255,1)');
           hexs.navy.visible=false;
           hexs.blue.visible=false;
           hexs.red.visible=false;
@@ -794,10 +794,10 @@ if(labystate ==6 && mirrorstate ==1){
   hexs={};
     hexs.navy=hexmirror(145,150,'rgba(0,51,204,1)');
     hexs.blue=hexmirror(194,125,'rgba(75,100,255,1)');
-    hexs.red=hexmirror(94,66,'rgba(255,0,0,1)');
+    hexs.red=hexmirror(96,66,'rgba(255,0,0,1)');
     hexs.green=hexmirror(194,66,'rgba(0,138,83,1)');
     hexs.akane=hexmirror(145,40,'rgba(254,131,50,1)');
-    hexs.purple=hexmirror(94,125,'rgba(153,51,255,1)');
+    hexs.purple=hexmirror(96,125,'rgba(153,51,255,1)');
     hexs.navy.visible=false;
     hexs.blue.visible=false;
     hexs.red.visible=false;
@@ -901,7 +901,7 @@ if(Hand =="purple" && purplestate ==1){
     se8.play();
     purplestate = 5;//アイテム消費
     lostItem("purple")
-    hexs.green.visible=true;
+    hexs.purple.visible=true;
     Mirrorkey[0] +=1
     Mirrorkey[6] = Mirrorkey[0]
 }else if(purplestate ==5 && Mirrorkey[6] > 0){
@@ -909,7 +909,7 @@ if(Hand =="purple" && purplestate ==1){
     Mirrorkey[0] -=1
     Mirrorkey[6] = 0
     getItem("purple");
-    hexs.akane.visible=false;
+    hexs.purple.visible=false;
 }
 
 }}
@@ -2532,22 +2532,22 @@ var fade = new createjs.Shape();
       createText(MessageWindow,"どっかんパンチ　"+ punchstate + "回",300,250,28,{font:"游明朝",color:"#fff"});
     if(hour > 0){
       rankAnimation(MessageWindow,queue.getResult("rankc.png"))
-      createText(MessageWindow,"すっごく時間がかかっちゃったけど、\nニーシャに会えた！\n（Tips：クリアタイム）",150,375,24,{font:"游明朝",color:"#fff"});
+      createText(MessageWindow,"すっごく時間がかかっちゃったけど、\nニーシャに会えた！\n（Tips：クリアタイム）",320,375,24,{align:"center",font:"游明朝",color:"#fff"});
     }else if(min>30){
       rankAnimation(MessageWindow,queue.getResult("rankb.png"))
-      createText(MessageWindow,"ニーシャを待たせちゃったかな？\n（Tips：クリアタイム）",150,375,24,{font:"游明朝",color:"#fff"});
+      createText(MessageWindow,"ニーシャを待たせちゃったかな？\n（Tips：クリアタイム）",320,375,24,{align:"center",font:"游明朝",color:"#fff"});
     }else if(cakestate ==1 && punchstate < 3){
       rankAnimation(MessageWindow,queue.getResult("rankss.png"))
-      createText(MessageWindow,"ひゃぁあ！？　SSランクだぁ！\nここまで遊んでくれてありがと！",150,375,24,{font:"游明朝",color:"#fff"});
+      createText(MessageWindow,"ひゃぁあ！？　SSランクだぁ！\nここまで遊んでくれてありがと！",320,375,24,{align:"center",font:"游明朝",color:"#fff"});
     }else if(cakestate ==1){
       rankAnimation(MessageWindow,queue.getResult("ranks.png"))
-      createText(MessageWindow,"ニーシャがあんなに喜んでくれて、\nラビィも嬉しい！\n（Tips：控えめなどっかんパンチ）",150,375,24,{font:"游明朝",color:"#fff"});
+      createText(MessageWindow,"ニーシャがあんなに喜んでくれて、\nラビィも嬉しい！\n（Tips：控えめなどっかんパンチ）",320,375,24,{align:"center",font:"游明朝",color:"#fff"});
     }else if(cakestate ==2){
       rankAnimation(MessageWindow,queue.getResult("ranka.png"))
-      createText(MessageWindow,"まさかケーキが溶けちゃったなんて……。\n（Tips：ケーキは時間が経つと溶けてしまう）",150,375,24,{font:"游明朝",color:"#fff"});
+      createText(MessageWindow,"あーあ、ケーキが溶けちゃったなんて……。\n（Tips：ケーキは時間が経つと溶けてしまう）",320,375,24,{align:"center",font:"游明朝",color:"#fff"});
     }else{
       rankAnimation(MessageWindow,queue.getResult("rankb.png"))
-      createText(MessageWindow,"なにか忘れてるような……なんだっけ？\n（Tips：ニーシャに渡したかったもの）",150,375,24,{font:"游明朝",color:"#fff"});
+      createText(MessageWindow,"なにか忘れてるような……なんだっけ？\n（Tips：ニーシャに渡したかったもの）",320,375,24,{align:"center",font:"游明朝",color:"#fff"});
     }
   })
 };
