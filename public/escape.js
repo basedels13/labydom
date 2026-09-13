@@ -654,7 +654,7 @@ function clickHandler(e) {
               view =5;//タイマーストップ
               Bgm2.play();
               Movemap.visible=false;
-              Itembartext.text.visible=false;
+              Itembartext.visible=false;
               var P = new createjs.Shape();
                   P.graphics.beginFill("rgb(255,255,255)").drawRect(0, 0,640, 480);
                   P.alpha=0;
@@ -2532,22 +2532,22 @@ var fade = new createjs.Shape();
       createText(MessageWindow,"どっかんパンチ　"+ punchstate + "回",300,250,28,{font:"游明朝",color:"#fff"});
     if(hour > 0){
       rankAnimation(MessageWindow,queue.getResult("rankc.png"))
-      createText(MessageWindow,"すっごく時間がかかっちゃったけど、ニーシャに会えた！\n（Tips：クリアタイム）",150,400,24,{font:"游明朝",color:"#fff"});
+      createText(MessageWindow,"すっごく時間がかかっちゃったけど、\nニーシャに会えた！\n（Tips：クリアタイム）",150,375,24,{font:"游明朝",color:"#fff"});
     }else if(min>30){
       rankAnimation(MessageWindow,queue.getResult("rankb.png"))
-      createText(MessageWindow,"ニーシャを待たせちゃったかな？\n（Tips：クリアタイム）",150,400,24,{font:"游明朝",color:"#fff"});
+      createText(MessageWindow,"ニーシャを待たせちゃったかな？\n（Tips：クリアタイム）",150,375,24,{font:"游明朝",color:"#fff"});
     }else if(cakestate ==1 && punchstate < 3){
       rankAnimation(MessageWindow,queue.getResult("rankss.png"))
-      createText(MessageWindow,"ひゃぁあ！？　SSランクだぁ！\nここまで遊んでくれてありがと！",150,400,24,{font:"游明朝",color:"#fff"});
+      createText(MessageWindow,"ひゃぁあ！？　SSランクだぁ！\nここまで遊んでくれてありがと！",150,375,24,{font:"游明朝",color:"#fff"});
     }else if(cakestate ==1){
       rankAnimation(MessageWindow,queue.getResult("ranks.png"))
-      createText(MessageWindow,"ニーシャがあんなに喜んでくれて、ラビィも嬉しい！\n（Tips：控えめなどっかんパンチ）",150,400,24,{font:"游明朝",color:"#fff"});
+      createText(MessageWindow,"ニーシャがあんなに喜んでくれて、\nラビィも嬉しい！\n（Tips：控えめなどっかんパンチ）",150,375,24,{font:"游明朝",color:"#fff"});
     }else if(cakestate ==2){
       rankAnimation(MessageWindow,queue.getResult("ranka.png"))
-      createText(MessageWindow,"まさかケーキが溶けちゃったなんて……。\n（Tips：ケーキは時間が経つと溶けてしまう）",150,400,24,{font:"游明朝",color:"#fff"});
+      createText(MessageWindow,"まさかケーキが溶けちゃったなんて……。\n（Tips：ケーキは時間が経つと溶けてしまう）",150,375,24,{font:"游明朝",color:"#fff"});
     }else{
       rankAnimation(MessageWindow,queue.getResult("rankb.png"))
-      createText(MessageWindow,"なにか忘れてるような……なんだっけ？\n（Tips：ニーシャに渡したかったもの）",150,400,24,{font:"游明朝",color:"#fff"});
+      createText(MessageWindow,"なにか忘れてるような……なんだっけ？\n（Tips：ニーシャに渡したかったもの）",150,375,24,{font:"游明朝",color:"#fff"});
     }
   })
 };
